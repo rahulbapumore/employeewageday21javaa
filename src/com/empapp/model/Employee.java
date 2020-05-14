@@ -35,19 +35,13 @@ public class Employee
   {
 	this.id = id;
   }
-  public void  setIsPresent()
+  public void  setIsPresent(boolean isPresent)
   {
-	if(Math.round(Math.random()) == 0)
-         this.isPresent = false ;
-	else
-	 this.isPresent = true;
+	this.isPresent = isPresent;
   }
-  public void setDoneParttime()
+  public void setDoneParttime(boolean doneParttime)
   {
-        if(Math.round(Math.random()) == 0) 
-         this.doneParttime = false ;
-        else
-         this.doneParttime = true;
+        this.doneParttime = doneParttime;
        
   }
  /* public void setDailyWage(int dw)

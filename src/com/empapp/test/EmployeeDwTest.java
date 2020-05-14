@@ -13,17 +13,18 @@ class EmployeeDwTest
   {
 	Employee brlzEmp =  new Employee();
 	brlzEmp.setId(1);
-	brlzEmp.setIsPresent();
-	brlzEmp.setDoneParttime();
+//	brlzEmp.setIsPresent();
+//	brlzEmp.setDoneParttime();
 	
         Employee abcEmp =  new Employee();
         brlzEmp.setId(2);
-        brlzEmp.setIsPresent();
-        brlzEmp.setDoneParttime();
-
+        
 	IEmployeeManager blem = new BridgelabzEmployeeMgr();
 	IEmployeeManager abcem = new AbcEmployeeMgr();
 	
+	brlzEmp.setIsPresent(blem.isEmployeePresent());
+        brlzEmp.setDoneParttime(abcem.isEmployeeParttime());
+
 	System.out.println("Dailywage for Employee from bridgelabz company with id = "+ brlzEmp.getId() + " is "+blem.calculateDailyWage(brlzEmp));
         System.out.println("Monthly wage for Employee from bridgelabz company with id = "+ brlzEmp.getId() + " is "+blem.calculateMonthlyWage(brlzEmp));
              
